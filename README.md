@@ -28,6 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
+<!--
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -50,7 +51,7 @@
   </p>
 </p>
 
-
+-->
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -69,12 +70,14 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#run">Run</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!--
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
+    -->
   </ol>
 </details>
 
@@ -83,9 +86,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+![project image](images/Anpr.jpg)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Auto Number Plate Recognition (ANPR) is a computer vision task that uses Optical Character Recognition (OCR) and other image segmentation and detection methods to read the car number plate. In this project, we successfully locate the plate in the frame and recognize the characters using Optical Character Recognition. Also, draw the bounding box on the license plate and put the recognized license number above the bounding box.
+
+## Motivation
+
+## Techinical Aspect
+
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -96,6 +105,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
+<!--
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -103,57 +113,58 @@ This section should list any major frameworks that you built your project using.
 * [JQuery](https://jquery.com)
 * [Laravel](https://laravel.com)
 
-
+-->
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Auto number plate recognition is a computer vision project. For running this project, install the required packages and libraries. Installing such stuff follows the steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Make sure you have installed all of the following prerequisites on your development machine.
+* Python 3.6
+* Opencv 4.5.1
+* Numpy
+* Tesseract-ocr
+
+<!--
 * npm
   ```sh
   npm install npm@latest -g
   ```
+-->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+* The Code is written in Python 3.6. For running this project locally on your machine, first, make a virtual environment; you can follow steps to create a virtual environment [here](https://docs.python.org/3/tutorial/venv.html). To install the required packages and libraries, run this command in the project directory after cloning the repository:
+* Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/ermp8888/Auto-Number-Plate-Recognize.git
    ```
-3. Install NPM packages
+* Run the Command to install packages
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
-
+* To install the Tesseract-ocr follow this [page](https://github.com/UB-Mannheim/tesseract/wiki)
+   
+   
 <!-- USAGE EXAMPLES -->
-## Usage
+## Run
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+After creating a virtual environment and install all required packages and libraries, run license_plate_with_ocr.py file to run the project.
 
 
 
 <!-- ROADMAP -->
+<!--
 ## Roadmap
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -166,23 +177,24 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
+-->
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Mohd Parvez - [@mohdparvez94](https://twitter.com/mohdparvez94?s=08) - mohdparvez94@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ermp8888/Auto-Number-Plate-Recognize.git](https://github.com/ermp8888/Auto-Number-Plate-Recognize.git)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
+<!--
 ## Acknowledgements
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
@@ -195,7 +207,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 * [Sticky Kit](http://leafo.net/sticky-kit)
 * [JVectorMap](http://jvectormap.com)
 * [Font Awesome](https://fontawesome.com)
-
+-->
 
 
 
