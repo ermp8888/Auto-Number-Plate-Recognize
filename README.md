@@ -91,20 +91,37 @@
 
 Auto Number Plate Recognition (ANPR) is a computer vision task that uses Optical Character Recognition (OCR) and other image segmentation and detection methods to read the car number plate. In this project, we successfully locate the plate in the frame and recognize the characters using Optical Character Recognition. Also, draw the bounding box on the license plate and put the recognized license number above the bounding box.
 
-## Motivation
+<!-- ## Motivation -->
 
 ## Techinical Aspect
 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+<b>Devide this project into two parts-</b>
+<b>1. Plate detection</b>
+<b>2. Plate recognition</b>
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+<b>In the Plate detection phase, perform image processing filters which are given below.</b>
+* <b>Perform a blackhat (It reveal bright region of an image on dark background) morphological operation on the grayscale (Grayscale images are single channel images with pixel values in the range of [0, 255]) image. Output of this phase is given blow-</b>
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+![project image](images/blackhat_image.png)
+* <b>Find the light region in the processed image using Morphology and Thresholding. The output will look like below image.</b><br><br>
 
+![project image](images/Light_Region.png)<br>
+* <b>Compute the Scharr gradient representation of the blackhat image in the x-direction and then scale the result back to the range [0, 255].</b><br><br>
+![project image](images/Scharr_image.png)<br>
+* <b>Apply GaussianBlur to blur the gradient representation, apply closing operation and using otsu's method threshold it.</b><br><br>
+![project image](images/Grad_Thresh_image.png)<br>
+* <b>For cleaning the thresholded image apply erosion and dialation filters.</b><br><br>
+![project image](images/Dilate_image.png)<br>
+* <b>apply bitwise AND operation between the threshold result and the light regions of the image.</b><br><br>
+![project image](images/Final_image.png)<br><br>
+
+ <b>After perform all above filters on the image, find contours in the thresholded image and sort them by their size in descending order, keeping only the largest ones.</b><br><br>
+ ![project image](images/License_Plate_image.png)<br><br>
+ ![project image](images/ROI_image.png)<br><br>
+
+<b>Now, in the Plate recognition phase, we send the output of the plate detection phase in the OCR (Optical Character Recognition), which recognizes the character of the Number Plate and displays the result.</b><br><br>
+![project image](images/Output_ANPR_image.png)<br><br>
 <!--
 ### Built With
 
